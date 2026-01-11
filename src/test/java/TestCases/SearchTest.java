@@ -19,6 +19,8 @@ public class SearchTest extends BaseTest {
         search.getSortBy();
         Boolean verifyPrice=search.VerifyPrice();
         Assert.assertTrue(verifyPrice);
+        Boolean verifyBoxItem=search.BoxItemCount();
+        Assert.assertTrue(verifyBoxItem);
 //        driver.close();
     }
 }

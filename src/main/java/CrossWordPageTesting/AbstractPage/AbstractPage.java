@@ -18,9 +18,14 @@ public class AbstractPage {
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(findby));
     }
-    public void  getclick(By ele)
+    public void  waitForElements(By ele)
     {
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(ele));
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(ele));
+    }
+    public void  getclickFormat(By ele)
+    {
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(ele));
     }
 }
